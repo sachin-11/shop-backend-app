@@ -1,4 +1,5 @@
 const express = require('express');
+const products = require('./data/products')
 
 const app = express();
 const port = 5000; // Port to listen on
