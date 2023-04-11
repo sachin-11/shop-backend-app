@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const products = require('./data/products')
 
 const app = express();
@@ -6,6 +7,7 @@ const port = 5000; // Port to listen on
 
 // Middleware to parse JSON request bodies
 app.use(express.json());
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.send('API is running...')
