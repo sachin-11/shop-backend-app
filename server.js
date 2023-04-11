@@ -13,7 +13,7 @@ app.use(cors);
 app.use(express.json())
 
 app.get('/', (req, res) => {
-  res.send('API is running.')
+  res.send('API is running..')
 })
 
 app.get('/products', (req, res) => {
