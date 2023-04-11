@@ -9,7 +9,7 @@ app.use(cors);
 app.use(express.json())
 
 app.get('/', (req, res) => {
-  res.send('API is running....')
+  res.send('API is running..')
 })
 
 app.get('/products', (req, res) => {
@@ -22,3 +22,5 @@ app.get('/products/:id', (req, res) => {
 })
 
 app.listen(5000, console.log('Server running on port 5000'))
+
+module.exports = server;

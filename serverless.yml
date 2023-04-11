@@ -1,0 +1,17 @@
+service: backend
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  memorySize: 2048
+  stage: dev
+  timeout: 15
+  region: ap-south-1
+  runtime: nodejs18.x
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+     - http: ANY /{proxy+}
+     - http: ANY /
